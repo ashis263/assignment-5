@@ -1,4 +1,9 @@
-document.getElementById('blog-btn').
+document.getElementById('blog-btn1').
+    addEventListener('click', function(){
+        window.location.href = './blog.html';
+    });
+
+document.getElementById('blog-btn2').
     addEventListener('click', function(){
         window.location.href = './blog.html';
     });
