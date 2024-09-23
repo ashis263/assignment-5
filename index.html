@@ -6,11 +6,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        lexend: 'Lexend',
+                    },
+                    colors: {
+                        primary: 'rgb(180, 244, 97)',
+
+                        navBg: 'rgb(249, 247, 243)',
+                        
+                        textPrimary: 'rgb(17, 17, 17)',
+                        textSecondary: 'rgba(17, 17, 17, 0.7)'
+                    }
+                }
+            }
+        }
+    </script>
     <title>Donate for Disaster Victims</title>
 </head>
 
-<body>
-
+<body class="font-lexend text-textPrimary">
+    <header>
+        <nav class="bg-navBg">
+            <div class="navbar w-11/12 mx-auto max-w-screen-2xl flex justify-around sm:py-3 sm:px-32 sm:text-xl">
+                <div class="navbar-start">
+                    <button id="blog-btn" class="btn btn-sm sm:hidden bg-primary font-bold">Blog</button>
+                    <button id="blog-btn" class="btn hidden sm:block bg-primary text-xl w-32 font-bold">Blog</button>
+                </div>
+                <div class="navbar-center">
+                    <div class="flex items-center gap-3">
+                        <img src="./assets/logo.png" class="w-2/3 sm:w-auto" alt="logo">
+                        <h2 class="font-bold hidden sm:block">Donate for Disaster Victims</h2>
+                    </div>
+                </div>
+                <div class="navbar-end text-textSecondary space-x-1 sm:space-x-2">
+                    <img src="./assets/coin.png" class="w-4 sm:w-5" alt="coin">
+                    <p class="font-semibold text-sm sm:text-xl">
+                        <span id="remaining-bal">5500</span>
+                        BDT
+                    </p>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <script src="./js/main.js"></script>
 </body>
 
 </html>
