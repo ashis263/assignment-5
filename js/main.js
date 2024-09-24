@@ -44,3 +44,10 @@ document.getElementById('quota-btn').
         event.preventDefault();
         donation('quota-amount', 'quota-bal', 'quota-heading');
     });
+
+
+//modal closing
+document.getElementById('modal-btn').
+    addEventListener('click', function(){
+        document.getElementById('modal').classList.add('hidden');
+    });

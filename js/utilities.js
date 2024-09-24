@@ -18,6 +18,8 @@ function donation(inputtedAmount, bal, heading){
                 balInNumber += amount;
                 const date = new Date();
 
+                document.getElementById('modal').classList.remove('hidden');
+
                 const div = document.createElement('div');
                 div.innerHTML = `
                 <div class="p-2 sm:p-5 border-2 rounded-xl mb-2 sm:mb-2 space-y-2 sm:space-y-4">
