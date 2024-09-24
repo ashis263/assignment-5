@@ -42,3 +42,20 @@ function donation(inputtedAmount, clickedBtn, bal, heading){
     });
 }
 
+function btnToggler(btn1, section1, btn2, section2) {
+    const ownBtn = document.getElementById(btn1);
+    const ownSection = document.getElementById(section1);
+    const otherBtn = document.getElementById(btn2);
+    const otherSection = document.getElementById(section2);
+    ownBtn.addEventListener('click', function () {
+        otherBtn.classList.add('btn-outline');
+        otherBtn.classList.add('text-textSecondary');
+        otherBtn.classList.remove('bg-primary');
+        ownBtn.classList.remove('btn-outline');
+        ownBtn.classList.remove('text-textSecondary');
+        ownBtn.classList.add('bg-primary');
+        ownSection.classList.remove('hidden');
+        otherSection.classList.add('hidden');
+    });
+}
+
