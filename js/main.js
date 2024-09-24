@@ -25,10 +25,22 @@ btnToggler('history-btn', 'history', 'donation-btn', 'donation');
 
 
 //for noakhali section donation
-donation('noakhali-amount', 'noakhali-btn', 'noakhali-bal', 'noakhali-heading');
+document.getElementById('noakhali-btn').
+    addEventListener('click', function (event) {
+        event.preventDefault();
+        donation('noakhali-amount', 'noakhali-bal', 'noakhali-heading');
+    });
 
 //for feni section donation
-donation('feni-amount', 'feni-btn', 'feni-bal', 'feni-heading');
+document.getElementById('feni-btn').
+    addEventListener('click', function (event) {
+        event.preventDefault();
+        donation('feni-amount', 'feni-bal', 'feni-heading');
+    });
 
 //for quota section donation
-donation('quota-amount', 'quota-btn', 'quota-bal', 'quota-heading');
+document.getElementById('quota-btn').
+    addEventListener('click', function (event) {
+        event.preventDefault();
+        donation('quota-amount', 'quota-bal', 'quota-heading');
+    });

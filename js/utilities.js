@@ -4,11 +4,8 @@ function getInputNumValById(id){
     return valInNum;
 }
 
-function donation(inputtedAmount, clickedBtn, bal, heading){
-    document.getElementById(clickedBtn).
-    addEventListener('click', function (event) {
-        event.preventDefault();
-        const amount = getInputNumValById(inputtedAmount);
+function donation(inputtedAmount, bal, heading){
+    const amount = getInputNumValById(inputtedAmount);
         let remainingBalString = document.getElementById('remaining-bal').innerText;
         let remainingBal = parseFloat(remainingBalString);
         let balString = document.getElementById(bal).innerText;
@@ -20,7 +17,6 @@ function donation(inputtedAmount, clickedBtn, bal, heading){
                 remainingBal -= amount;
                 balInNumber += amount;
                 const date = new Date();
-                document.getElementById(inputtedAmount).value = '';
 
                 const div = document.createElement('div');
                 div.innerHTML = `
@@ -38,7 +34,7 @@ function donation(inputtedAmount, clickedBtn, bal, heading){
         } else {
             alert('Please Enter Valid Amount')
         }
-    });
+        document.getElementById(inputtedAmount).value = '';
 }
 
 function btnToggler(btn1, section1, btn2, section2) {
