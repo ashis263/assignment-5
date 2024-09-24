@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        lexend: 'Lexend',
+                    },
+                    colors: {
+                        primary: 'rgb(180, 244, 97)',
+
+                        navBg: 'rgb(249, 247, 243)',
+
+                        textPrimary: 'rgb(17, 17, 17)',
+                        textSecondary: 'rgba(17, 17, 17, 0.7)'
+                    }
+                }
+            }
+        }
+    </script>
+    <title>Donate for Disaster Victims</title>
+</head>
+
+<body class="font-lexend text-textPrimary">
+    <header class="sticky top-0">
+        <nav>
+            <div class="bg-navBg">
+                <div class="navbar w-11/12 mx-auto max-w-screen-2xl md:px-16 sm:pt-3 sm:pb-8 sm:text-xl bg-transparent">
+                    <div class="navbar-start">
+                        <button id="home-btn1" class="btn btn-sm sm:hidden bg-primary font-bold">Home</button>
+                        <button id="home-btn2"
+                            class="btn hidden sm:block bg-primary text-xl w-32 font-bold">Home</button>
+                    </div>
+                    <div class="navbar-center">
+                        <div class="flex items-center gap-3">
+                            <img src="./assets/dom-logo.png" class="w-10 sm:w-24" alt="logo">
+                        </div>
+                    </div>
+                    <div class="navbar-end text-textSecondary space-x-1 sm:space-x-2">
+                        <button class="btn btn-sm sm:hidden bg-primary font-bold"><a href="https://www.w3schools.com/js/js_htmldom.asp" target="_blank">More</a></button>
+                        <button class="btn hidden sm:block bg-primary text-xl w-32 font-bold"><a href="https://www.w3schools.com/js/js_htmldom.asp" target="_blank">More</a></button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="w-4/5 mx-auto max-w-screen-2xl my-10 text-center sm:text-left">
+            <h2 class="text-lg sm:text-4xl text-center my-5 sm:my-10 font-bold">Frequently Asked Questions About Document Object Model</h2>
+            <div class="flex justify-center gap-2 sm:gap-5 my-5 sm:my-10">
+                <img class="w-1/4 pt-2" src="./assets/dom.png" alt="document object model">
+            </div>
+            <div class="join join-vertical w-full">
+                <div class="collapse collapse-arrow join-item border-base-300 border sm:p-3">
+                  <input type="radio" name="my-accordion-4" checked="checked" />
+                  <div class="collapse-title text-sm sm:text-lg font-medium">What is the Document Object Model (DOM)?</div>
+                  <div class="collapse-content">
+                    <p class="text-xs text-textSecondary sm:text-sm p-2">Document Object Model (DOM) is a interface or we can say, platform, which allows us to get the web's markup language's elements as object (HTML like object) by using javascript. We can easily create, remove or modify elements, elements's attributes, classes and style them by using Document Object Model.</p>
+                  </div>
+                </div>
+                <div class="collapse collapse-arrow join-item border-base-300 border sm:p-3">
+                  <input type="radio" name="my-accordion-4" />
+                  <div class="collapse-title text-sm sm:text-lg font-medium">How do you select an element from the DOM?</div>
+                  <div class="collapse-content">
+                    <p class="text-xs text-textSecondary sm:text-sm p-2">There are several ways to select an element using DOM. The most used way of selecting is by selecting the ID (document.getElementById('id')). We can use use document.querySelector('query-selector') which selects the first element which that matches the query. Both of them selects a single element. Also we can select multiple by using document.getElementsByClassName('class-name') which selects all the elements that matches the class name class-name, document.getElementsByTagName('tag-name') which selects all the elements that matches the tag tag-name and document.querySelectorAll('query-selector') which selects all the elements that matches the query selector query-selector</p>
+                  </div>
+                </div>
+                <div class="collapse collapse-arrow join-item border-base-300 border sm:p-3">
+                  <input type="radio" name="my-accordion-4" />
+                  <div class="collapse-title text-sm sm:text-lg font-medium">What is event delegation in the context of the DOM, and why is it useful?</div>
+                  <div class="collapse-content">
+                    <p class="text-xs text-textSecondary sm:text-sm p-2">The way of handling an event of an element by selecting it's parent element, then selecting parent's children and then handle the event is event delegation. If we want to use same event listener to multiple elements which are sibling to each other, we can simply delegate the event listener to their parent and then optimize our code by looping through the parent and write a single event listener. Thats why event delegation is useful.</p>
+                  </div>
+                </div>
+                <div class="collapse collapse-arrow join-item border-base-300 border sm:p-3">
+                  <input type="radio" name="my-accordion-4" />
+                  <div class="collapse-title text-sm sm:text-lg font-medium">How do you manipulate an element's attributes and styles using the DOM?</div>
+                  <div class="collapse-content">
+                    <p class="text-xs text-textSecondary sm:text-sm p-2">To manipulate an element's attribute we need to select the element first then use the setAttribute('attribute-name') or removeAttribute('attribute-name') method to add or remove attribute with the name attribute-name.
+                        document.getElementById('id').setAttribute('attribute-name')
+
+                    By using style.cssPropertyName = 'css-value' after selecting the element we can easily add or modify it's style.
+                    document.getElementById('id').style.cssPropertyName = 'css-value'
+                    </p>
+                  </div>
+                </div>
+              </div>
+        </section>
+    </main>
+    <script>
+        
+    //smaller device home button hyperlink
+    document.getElementById('home-btn1').
+        addEventListener('click', function(){
+            window.location.href = './index.html';
+        });
+    
+    //larger device home button hyperlink
+    document.getElementById('home-btn2').
+        addEventListener('click', function(){
+            window.location.href = './index.html';
+        });
+
+    </script>
+</body>
+</html>
