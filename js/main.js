@@ -38,3 +38,11 @@ historyBtn.addEventListener('click', function(){
     donationSection.classList.add('hidden'); 
 });
 
+//for noakhali section donation
+donation('noakhali-amount', 'noakhali-btn', 'noakhali-bal', 'noakhali-heading');
+
+//for feni section donation
+donation('feni-amount', 'feni-btn', 'feni-bal', 'feni-heading');
+
+//for quota section donation
+donation('quota-amount', 'quota-btn', 'quota-bal', 'quota-heading');
