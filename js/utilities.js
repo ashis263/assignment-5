@@ -24,10 +24,9 @@ function donation(inputtedAmount, clickedBtn, bal, heading){
 
                 const div = document.createElement('div');
                 div.innerHTML = `
-                <div style="padding: 20px; border: 1px solid rgba(17, 17, 17, 0.1); border-radius: 10px; margin-bottom: 20px;">
-                    <p style="font-size: 20px; color: rgb(17, 17, 17)"><b>${amount} Taka is Donated for "${document.getElementById(heading).innerText}</b>"</p>
-                    <br>
-                    <p style="color: rgba(17, 17, 17, 0.7)">Date: ${date}</p>
+                <div class="p-2 sm:p-5 border-2 rounded-xl mb-2 sm:mb-2 space-y-2 sm:space-y-4">
+                    <p class="text-sm sm:text-xl font-bold">${amount} Taka is Donated for "${document.getElementById(heading).innerText}"</p>
+                    <p class="text-textSecondary text-xs sm:text-lg">Date: ${date}</p>
                 </div>
                 `;
                 document.getElementById('history').appendChild(div);
